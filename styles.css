@@ -1,0 +1,78 @@
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #f0f8ff;
+  overflow: hidden; /* Untuk efek animasi */
+}
+
+.container {
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Transparansi untuk efek */
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  color: #ff1493;
+}
+
+.gift-box img {
+  width: 150px;
+  cursor: pointer;
+}
+
+.feedback, .confession {
+  margin-top: 20px;
+}
+
+#feedbackMessage {
+  width: 80%;
+  height: 100px;
+}
+
+button {
+  background-color: #ff1493;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff69b4;
+}
+
+#noButton {
+  position: relative;
+}
+
+#yesButton {
+  margin-right: 20px;
+}
+
+/* Efek Bunga Jatuh */
+@keyframes fall {
+  0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+
+.flower {
+  position: fixed;
+  top: -10%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background-image: url('flower.png'); /* Gambar bunga kecil */
+  background-size: cover;
+  animation-name: fall;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}

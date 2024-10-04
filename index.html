@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Selamat Ulang Tahun, Chelsea!</h1>
+        <p>Semoga harimu penuh kebahagiaan dan cinta. 🎉</p>
+
+        <div class="gift-box">
+            <img src="gift.gif" alt="Gift" id="giftImage" onclick="openGift()">
+            <p>Klik hadiah untuk melihat kejutan!</p>
+        </div>
+
+        <div class="feedback">
+            <h2>Tinggalkan Pesanmu:</h2>
+            <textarea id="feedbackMessage" placeholder="Tulis pesan di sini"></textarea>
+            <button onclick="sendToWhatsApp()">Kirim ke WhatsApp</button>
+        </div>
+
+        <div class="confession">
+            <h2>Apakah kamu mau jadi pacarku?</h2>
+            <button id="yesButton" onclick="showYesMessage()">Ya</button>
+            <button id="noButton" onmouseover="moveButton()">Tidak</button>
+        </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop>
+        <source src="romantic-music.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

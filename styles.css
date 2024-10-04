@@ -2,13 +2,13 @@ body {
   font-family: 'Arial', sans-serif;
   text-align: center;
   background-color: #f0f8ff;
-  overflow: hidden; /* Untuk efek animasi */
+  overflow: hidden;
 }
 
 .container {
   margin: 50px auto;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* Transparansi untuk efek */
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   max-width: 600px;
@@ -56,6 +56,32 @@ button:hover {
   margin-right: 20px;
 }
 
+/* Responsiveness untuk perangkat mobile dan tablet */
+@media (max-width: 768px) {
+  .container {
+      margin: 20px;
+      padding: 15px;
+  }
+
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  #feedbackMessage {
+      width: 100%;
+      height: 80px;
+  }
+
+  button {
+      padding: 8px 16px;
+      font-size: 14px;
+  }
+
+  .gift-box img {
+      width: 120px;
+  }
+}
+
 /* Efek Bunga Jatuh */
 @keyframes fall {
   0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
@@ -68,7 +94,7 @@ button:hover {
   left: 50%;
   width: 30px;
   height: 30px;
-  background-image: url('flower.png'); /* Gambar bunga kecil */
+  background-image: url('flower.png');
   background-size: cover;
   animation-name: fall;
   animation-duration: 10s;
